@@ -1,0 +1,47 @@
+[
+    {
+        "title": "以下属于调用摄像头硬件的权限的是（）（20分）",
+        "a": "<uses-permission android:name=\"android.permission.CAMERA_ADDON\">",
+        "b": "<uses-permission android:name=\"android.permission.CAMERA\">",
+        "c": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\">",
+        "d": "<uses-permission android:name=\"android.permission.READ_CALENDAR\">",
+        "answer": "B",
+        "desc": "根据官方提供的文档，调用摄像头的权限为“android.permission.CAMERA”，故选B"
+    },
+    {
+        "title": "<uses-permission android:name=\"android.permission.READ_CALENDAR\">调用的是什么权限（）（20分）",
+        "a": "写入日程提醒",
+        "b": "读取日程提醒",
+        "c": "读取日历数据",
+        "d": "拍照",
+        "answer": "B",
+        "desc": "根据官方提供的文档，\"READ_CALENDAR\"为读取日程提醒的权限，故选B"
+    },
+    {
+        "title": "以下属于发送短信的权限的是（）（20分）",
+        "a": "<use-permission android:name=\"android.permission.SEND_SMS\">",
+        "b": "<uses-permission android:name=\"android.permission.SEND_SMS\">",
+        "c": "<use-permission android:name=\"android.permission.READ_SMS\">",
+        "d": "<uses-permission android:name=\"android.permission.READ_SMS\">",
+        "answer": "B",
+        "desc": "根据官方提供的文档，发送短信的权限为“android.permission.SEND_SMS”，另外，申请权限的标签为<uses-prmission >,故选B"
+    },
+    {
+        "title": "<uses-permission android:name=\"android.permission.INTERNET\">调用的是什么权限（）",
+        "a": "改变网络状态",
+        "b": "允许获得网络定位信息改变",
+        "c": "访问网络",
+        "d": "获取网络状态",
+        "answer": "C",
+        "desc": "根据官方提供的文档，\"READ_CALENDAR\"为访问网络的权限，故选C"
+    },
+    {
+        "title": "以下申请的权限中，哪个属于普通权限（）",
+        "a": "<use-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\">",
+        "b": "<use-permission android:name=\"android.permission.RECORD_AUDIO\">",
+        "c": "<use-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\">",
+        "d": "<use-permission android:name=\"android.permission.ACCESS_WIFI_STATE\">",
+        "answer": "D",
+        "desc": "根据官方提供的文档，ACCESS_FINE_LOCATION为获取精确位置，RECORD_AUDIO为录音权限，WRITE_EXTERNAL_STORAGE为写入外部存储器，ACCESS_WIFI_STATE为获取Wifi状态，除了D选项，其他的权限均为危险权限，故选D"
+    }
+]

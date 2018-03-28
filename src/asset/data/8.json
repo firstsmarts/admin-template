@@ -1,0 +1,6 @@
+{
+    "title": "操作练习",
+    "type": 2,
+    "kvm": "pack18",
+    "content": "<h2><strong><span>操作练习</span></strong></h2><p><br></p><p><span style='font-size:10.5pt;font-family:&quot;微软雅黑&quot;,sans-serif;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>在通过前两个课时的学习后，大家对以下的知识点有了一定的了解：</span></p><p></p><ul><li>APK文件的结构以及各个组件的作用</li><li>APK文件漏洞扫描及对应在代码中的表现（部分示例）</li><li>Android应用仿冒件的表现形式</li><li>对Android应用仿冒件的对比分析方法</li></ul><p><br></p><p><span style='font-size:10.5pt;font-family:&quot;微软雅黑&quot;,sans-serif;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>在“操作练习”环节里，我们同时提供了针对各个知识点的练习操作案例，大家可以对照以下表格中各个场景的APK文件进行静态分析的联系操作（以下列表中的APK文件均存于“桌面==&gt;操作练习”目录）。</span></p><pclass='MsoNormal'><br></p><h3><strong>APK文件静态分析案例</strong></h3><p><br></p><pclass='MsoNormal'><imgsrc='/static/85/8f/858f5ea0-d050-4e6b-903f-4fdb5758d7a5'></p><pclass='MsoNormal'><br></p><h3><strong>APK文件漏洞检测案例</strong></h3><pclass='MsoNormal'><br></p><pclass='MsoNormal'><imgsrc='/static/dc/10/dc1035df-39a0-425a-b673-6e11668491dc'></p><pclass='MsoNormal'><br></p><h3><strong>仿冒件对比分析案例</strong></h3><pclass='MsoNormal'><br></p><pclass='MsoNormal'><imgsrc='/static/c2/c3/c2c30e55-9b4d-471d-8375-37f355822d2f'></p><p></p>"
+}

@@ -1,0 +1,35 @@
+.loginbox{
+    color: red;
+    width: 360px;
+    margin: 0 auto;
+    padding: 110px 0 140px 0;
+}
+.brandlogo{
+    text-align: center;
+    font-size: 26px;
+    color: #666;
+    line-height: 44px;
+}
+.subslogen{
+    text-align: center;
+    width: 80%;
+    margin: 12px auto 40px auto;
+    color: #999;
+}
+.forgetpass{
+    float: right;
+    cursor: pointer;
+}
+.forgetpass:hover{
+    color: #69c0ff;
+}
+.dologin
+{
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+}
+.register{
+    
+    font-size: 12px;
+}

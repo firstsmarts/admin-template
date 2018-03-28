@@ -1,0 +1,22 @@
+#root{
+    background: #fff;
+}
+.ql-container{
+    min-height: 500px;
+}
+.ql-insertimg{
+    position: relative;
+    overflow: hidden;
+}
+.insertimg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+}
+.submithtml{
+    margin-top: 16px;
+}

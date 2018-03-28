@@ -1,0 +1,56 @@
+{
+    "title": "预备知识",
+    "type": 1,
+    "data": [
+        {
+            "title": "Android安装包",
+            "img": [],
+            "content": "<p><span>Android应用是以.apk为后缀的安装包文件的形式存储并在Android系统中运行的，其中apk文件是AndroidPackage的缩写。Android应用是通过Java进行编写，并利用Android SDK进行代码编译，而APK文件则是编译工程完成后，打包形成的安装文件。</span></p><p><span>APK文件实际是zip格式，只是其后缀名因为运行业务而更改为.apk。一个APK文件包含了一个Android应用正常运行所需要的所有资源，在各类操作系统中，都可以使用解压工具对其进行解压并查看其中内容。</span></p>"
+        },
+        {
+            "title": "APK文件结构",
+            "img": [],
+            "content": "<p><span>一个APK文件中，通常会包含以下内容：</span></p><ol><li><strong>META-INF</strong><span>：保存应用的签名信息的目录，用于检验APK文件的完整性。AndroidSDK在打包APK时会计算APK包中所有文件，之后把计算结果检测结果保存到该目录下。在实际安装应用程序时，系统会同样进行完整性校验，如果与META-INF目录中的内容不符，则无法安装。</span></li><li><strong>res</strong><span>：存放资源文件的目录，可存放包括动画文件、布局文件以及图像文件等资源，同时存放了很多.xml文件记录颜色、尺寸值、字符串等信息。</span></li><li><strong>AndroidManifest.xml</strong><span>：清单文件，具体内容在移动应用权限分析课程中提及。每个Android应用都必须包含并定义此文件，并且此文件的名字固定不可修改。</span></li><li><strong>classes.dex</strong><span>：在Android系统中，所有的应用均是在Dalvik虚拟机中通过加载dex文件运行的。具体地，dex文件是java 代码编译后产生的可在Dalvik虚拟机运行的类似字节码的文件。</span></li><li><strong>resources.arsc</strong><span>：用来记录资源文件和资源ID之间的映射关系的文件，保证程序运行时可以根据资源ID寻找对应资源。</span></li><li><strong>assets</strong><span>：可由开发者自行添加的目录，功能与res文件夹类似：用于存在资源文件。其中内容与res一样会被按原本格式保留，不会被压缩成为二进制码；与res区别在于：assets目录中的文件不存在对应id，并且可支持可定义的文件夹路径。</span></li><li><strong>lib</strong><span>：可由开发者根据需要进行添加的目录，存放着应用依赖的native库(.so结尾)文件。其中文件以C/C++编写，通常在应用对图片、网络、音视频处理有较高需求，而通过Java处理时无法达到预期效果时使用。</span></li></ol>"
+        },
+        {
+            "title": "AndroidManifest.xml文件",
+            "img": [],
+            "content": "<p><span>AndroidManifest.xml为清单文件。清单文件向 Android 系统提供应用的必要信息，如：应用的名字、版本、权限、引用的库文件等等，系统必须具有这些信息才可运行应用的任何代码。同时APK的AM文件是经过压缩的，需要经过反编译才能获得其中信息，通过ZIP包形式预览APK文件，无法直接获得AM文件中的信息。</span></p>"
+        },
+        {
+            "title": "META-INF目录",
+            "img": [],
+            "content": "<p><span>META-INF目录下存放的是签名信息，如之前介绍的，该目录下文件主要用于验证APK的完整性。其中包含了如下几个文件：</span></p><ul><li><span>CERT.RSA：记录开发者用私钥对APK签名后的信息</span></li><li><span>MANIFEST.MF：记录APK包中所有文件的SHA-1值</span></li><li><span>CERT.SF：与MANIFEST.MF功能相同，包含了MANIFEST.MF的所有内容与MANIFEST.MF本身的SHA-1值</span></li></ul>"
+        },
+        {
+            "title": "classes.dex文件",
+            "img": [],
+            "content": "<p>classes.dex文件其实是一个传统的java程序，把可执行的java文件编译后存在其中的class文件中。<span>经过复杂的编译，把java源代码转换为dex文件，为了保证文件可以在dalvik虚拟机中运行。</span></p><p><span><span>Android应用在打包时通过AndroidSDK中的dx工具将Java字节码转换为Dalvik字节码，其中转换后的dex文件共用了较多的字符串与类名，使其提及较原java字节码体积更小，运行也更有效率。</span></span></p>"
+        },
+        {
+            "title": "dex文件与smali代码",
+            "img": [],
+            "content": "<p>如之前提到的，dex文件可以在Dalvik虚拟机中被运行。但是实际的情况是：Dalvik字节码是难以阅读的，此时为了将Dalvik字节码变成能够被理解的形式，Smali代码诞生了。</p><p>简单地理解：smali就是Dalvik虚拟机运行的核心代码，只是被转化为更容易阅读的格式。</p><p>Smali有一套自己的语法，在实际的反编译分析时，dex文件也通常可以被反编译为smali代码和java代码，分析人员可以根据使用熟练程度，选择最上手的方法。</p>"
+        },
+        {
+            "title": "resources.arsc文件",
+            "img": [],
+            "content": "<p><span>res目录即是resource的缩写，从名字可看出目录下存放着运行APK需要的资源文件，其中该目录下包含着anim、drawable、layout、values、xml、raw等子目录，每个目录都包含着对应的文件，如：drawable目录下多保存着png，jpg等格式的图像资源。</span></p><p><span>值得注意的是，在res目录下的所有文件都会被映射到R.java文件中，并生成对应的ID，访问的时候直接使用资源ID即</span><a href='http://r.id/'>R.id</a><span>.filename。而此时resources.arsc文件则是被用于记录资源文件位置与ID对应关系的文件，以二进制的形式存储于APK文件中。</span></p>"
+        },
+        {
+            "title": "APK文件静态分析",
+            "img": [],
+            "content": "<p>在进行APK文件分析时，分析人员常常会利用<span>ShakaApktool</span>、<span>Dex2Jar、SmaliIDEA等开源工具对APK文件进行不同程度地拆解，分析。</span></p><p><span>工欲善其事必先利其器，可选择地，部分逆向分析工具将开源逆向工具进行了整合，并提供了可视化界面，让分析过程更加直接、便利，也不失为一类很好的选择。</span></p><p><span>通常在逆向分析的时候，分析人员可从代码下手，采用逐步发现的形式阅读代码以发现其中端倪。但是可选地，分析时候亦可从特征信息下手，如URL信息，疑似的手机号码、邮箱号码，或者特定的字符串，如“请输入密码”等。此时如果逆向分析工具具备了提取这类信息，或是对APK文件进行整体反编译后的全局搜索功能，将会提供极大的助力。</span></p>"
+        },
+        {
+            "title": "APK文件漏洞检测",
+            "img": [],
+            "content": "<p><span>在如今，Android手机逐渐成为了攻击者首要的攻击目标。其中，Android手机容易感染病毒的原因，也正是因为开发者采用Java这样解释型的语言，导致了APK文件容易被反编译、破解甚至被植入恶意代码改造。另一方面，由于Android系统的开源性，使得攻击者有了操作的环境，导致任意的漏洞都有可能被利用。</span></p><p><span>那么为了对抗此类情况，对apk文件进行漏洞检测显得尤为重要。</span></p><p><span>常见的APK文件漏洞检测，主要从分析APK文件代码入手，以检测应用数据安全，组件安全，权限安全，加密算法安全和本地接口安全等几个方面进行检测。</span></p>"
+        },
+        {
+            "title": "重打包检测",
+            "img": [],
+            "content": "<p><span>如之前提到的，APK文件本身很容易被反编译、破解以及被改造，导致很多开发者苦心开发的应用被植入恶意代码沦为恶意攻击者的攻击跳板。</span></p><p><span>在采用加固等保护措施提高破解难度的同时，我们也需要能够有鉴别仿冒APK文件的能力。在检测重打包文件时，我们通常会通过对比应用签名，更深入地，我们会对比APK包结构和具体代码，并研究区别代码的作用，以达到深度的对比分析。</span></p>"
+        }
+    ]
+}
